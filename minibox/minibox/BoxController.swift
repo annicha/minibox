@@ -1,9 +1,8 @@
 //
-//  TestLeitnerLevels.playground
-//  TestLeitnerLevels
+//  BoxController.swift
+//  minibox
 //
-//  Created by Anne on 26/9/20.
-//  Copyright © 2020 Anne Hanw. All rights reserved.
+//  Created by Anne on 27/9/20.
 //
 
 import Foundation
@@ -12,38 +11,8 @@ enum Level: Int, CaseIterable {
 	case one = 1, two = 2, three = 3, four = 4, five = 5, six = 6, seven = 7
 }
 
-/// Imitation of a box in the cloud
-class Box {
-	var startDate: Date
-	var latestStudyDate: Date
-	var setupDate: Date
-	var latestLevels: [Int] = []
-	var allDue: [Int] = []
-	var dayDone: Bool
-	
-	/// Box initializer for a new box that user never began studying before
-	init(startDate: Date) {
-		self.startDate = startDate
-		self.latestStudyDate = startDate
-		self.dayDone = false
-		self.setupDate = startDate
-		self.allDue = [1] // only level 1 is due on the first day
-	}
-	
-	/// Initialization for users that has already started tracking a box with paper
-	init(startDate: Date, latestStudyDate: Date, latestLevels: [Int], allDue: [Int], dayDone: Bool) {
-		self.startDate = startDate
-		self.latestStudyDate = latestStudyDate
-		self.latestLevels = latestLevels
-		self.dayDone = dayDone
-		self.allDue = allDue
-		self.setupDate = latestStudyDate
-	}
-}
-
 
 // MARK: - Imitation of Methods (exclude updating to the cloud)
-
 
 /// append levels to the existing levels and update latest study date
 func update(box: Box, withLatestLevel level: Int) -> Box {
@@ -361,6 +330,3 @@ func getDayInCycle(startDate: Date, for day: Date) -> (cycle: Int, day: Int)? {
 	return (cycle: cycleNum, day: dayNum)
 }
 	
-
-
-
