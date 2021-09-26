@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97C395D3258131BB009F7AAA /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C395D2258131BB009F7AAA /* DateHelper.swift */; };
 		97D21E18251FBDBD0092B043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D21E17251FBDBD0092B043 /* AppDelegate.swift */; };
 		97D21E1A251FBDBD0092B043 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D21E19251FBDBD0092B043 /* SceneDelegate.swift */; };
 		97D21E1F251FBDBE0092B043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D21E1D251FBDBE0092B043 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97C395D2258131BB009F7AAA /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		97D21E14251FBDBD0092B043 /* minibox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = minibox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D21E17251FBDBD0092B043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97D21E19251FBDBD0092B043 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				97D21E20251FBDC00092B043 /* Assets.xcassets */,
 				97D21E22251FBDC00092B043 /* LaunchScreen.storyboard */,
 				97D21E25251FBDC00092B043 /* Info.plist */,
+				97C395D2258131BB009F7AAA /* DateHelper.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C395D3258131BB009F7AAA /* DateHelper.swift in Sources */,
 				97D21E4B251FBDD30092B043 /* Box.swift in Sources */,
 				97D21E18251FBDBD0092B043 /* AppDelegate.swift in Sources */,
 				97D21E50251FBDE90092B043 /* BoxController.swift in Sources */,

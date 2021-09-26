@@ -27,7 +27,8 @@ class Box {
 	
 	/// Initialization for users that has already started tracking a box with paper
 	init(startDate: Date, latestStudyDate: Date, latestLevels: [Int], allDue: [Int], dayDone: Bool) {
-		self.startDate = startDate
+		let startDateMidnight = Calendar.current.startOfDay(for: startDate)
+		self.startDate = startDateMidnight
 		self.latestStudyDate = latestStudyDate
 		self.latestLevels = latestLevels
 		self.dayDone = dayDone
