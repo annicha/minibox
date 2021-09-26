@@ -208,8 +208,7 @@ public final class BoxController {
 		let today = cal.startOfDay(for: Date())
 			
 		let dayDiff = DateHelper.getDayDiff(from: date, to: today)
-		
-		guard dayDiff > 1 else {
+		guard dayDiff >= 1 else {
 			fatalError("Wrong method called 😵");
 		}
 		

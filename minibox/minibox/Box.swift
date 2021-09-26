@@ -14,6 +14,8 @@ class Box {
 	var setupDate: Date
 	var latestLevels: [Int] = []
 	var allDue: [Int] = []
+	
+	/// whether all the levels were studied at the last studied date
 	var dayDone: Bool
 	
 	/// Box initializer for a new box that user never began studying before

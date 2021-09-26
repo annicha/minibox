@@ -155,5 +155,36 @@ class miniboxTests: XCTestCase {
 	}
 	
 	// test fetching level from a box that was studied yesterday but didn't complete all levels
+	func test_fetch_from_yesterday_incomplete(){
+		let cal = Calendar(identifier: .gregorian)
+		let today = cal.startOfDay(for: Date())
+		guard let startDate = Calendar.current.date(byAdding: .day, value: -28, to: today),
+			  let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today) else { XCTFail(); return }
+
+		let yesterdayLevels = boxCtr.getLevels(at: yesterday, startDate: startDate)
+		XCTAssert(yesterdayLevels == Set([5,1]) ) // this is the second cycle so 5 is also due
+		
+		let box = Box(startDate: startDate, latestStudyDate: yesterday, latestLevels: [1], allDue: Array(yesterdayLevels), dayDone: false)
+		
+		let diffSinceStarted = DateHelper.getDayDiff(from: startDate, to: Date())
+		XCTAssertEqual(diffSinceStarted, 28)
+		
+		let dueTodayExclusively = boxCtr.getExclusiveDues(startDate: startDate, day: today)
+		XCTAssertEqual(dueTodayExclusively, Set([4,2,1]))
+		
+		let diff = DateHelper.getDayDiff(from: box.latestStudyDate, to: Date())
+		XCTAssertEqual(diff, 1)
+		
+
+		
+		let _ = boxCtr.getLevels(fromBox: box) { (dayDone, allDues) in
+			// should be updated to what we should study today
+			XCTAssertFalse(dayDone)
+			XCTAssertFalse(box.dayDone)
+			XCTAssertEqual(allDues, Set([4,2,1]))
+			let isSetupToday = Calendar.current.isDateInToday(box.setupDate)
+			XCTAssert(isSetupToday)
+		}
+	}
 
 }
