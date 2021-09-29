@@ -60,7 +60,7 @@ public final class BoxController {
 	/// Get due levels including MISSED days
 	func getLevels(fromBox box: Box, _ completion: @escaping(_ dayDone: Bool, _ allDues:Set<Int>) -> Void ) -> Set<Int> {
 		
-		/// whether a level is done at the moment, with studied levels excluded
+		/// due levels, exclude studied
 		var dueNow: Set<Int> = Set<Int>()
 		
 		/// All levels due that day
@@ -226,7 +226,7 @@ public final class BoxController {
 		return levels
 	}
 
-	/// Get level at a date, replacing values for the dictionary passed in.
+	/// Get level at a date, updating previous levels
 	func getLevels(at day: Date, startDate: Date, prevLevels: Set<Int> = Set<Int>()) -> Set<Int> {
 		
 		var levels: Set<Int> = prevLevels
@@ -238,7 +238,7 @@ public final class BoxController {
 		return levels
 	}
 
-	/// fundamental function to calculate due levels and update the dictionary passed in
+	/// fundamental function to calculate due levels
 	func getLevels(fromDayDiff dayDiff: Int, withPreviousLevels prevLevels: Set<Int> = Set<Int>()) -> Set<Int> {
 		var levels = prevLevels
 		let intervalDay = dayDiff % 64 + 1
