@@ -14,7 +14,6 @@
 		97D21E21251FBDC00092B043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D21E20251FBDC00092B043 /* Assets.xcassets */; };
 		97D21E24251FBDC00092B043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D21E22251FBDC00092B043 /* LaunchScreen.storyboard */; };
 		97D21E2F251FBDC00092B043 /* miniboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D21E2E251FBDC00092B043 /* miniboxTests.swift */; };
-		97D21E3A251FBDC00092B043 /* miniboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D21E39251FBDC00092B043 /* miniboxUITests.swift */; };
 		97D21E4B251FBDD30092B043 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D21E4A251FBDD30092B043 /* Box.swift */; };
 		97D21E50251FBDE90092B043 /* BoxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D21E4F251FBDE90092B043 /* BoxController.swift */; };
 /* End PBXBuildFile section */
@@ -49,8 +48,6 @@
 		97D21E2E251FBDC00092B043 /* miniboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniboxTests.swift; sourceTree = "<group>"; };
 		97D21E30251FBDC00092B043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D21E35251FBDC00092B043 /* miniboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miniboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		97D21E39251FBDC00092B043 /* miniboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniboxUITests.swift; sourceTree = "<group>"; };
-		97D21E3B251FBDC00092B043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D21E4A251FBDD30092B043 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		97D21E4F251FBDE90092B043 /* BoxController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +82,6 @@
 			children = (
 				97D21E16251FBDBD0092B043 /* minibox */,
 				97D21E2D251FBDC00092B043 /* miniboxTests */,
-				97D21E38251FBDC00092B043 /* miniboxUITests */,
 				97D21E15251FBDBD0092B043 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,15 +113,6 @@
 				97D21E30251FBDC00092B043 /* Info.plist */,
 			);
 			path = miniboxTests;
-			sourceTree = "<group>";
-		};
-		97D21E38251FBDC00092B043 /* miniboxUITests */ = {
-			isa = PBXGroup;
-			children = (
-				97D21E39251FBDC00092B043 /* miniboxUITests.swift */,
-				97D21E3B251FBDC00092B043 /* Info.plist */,
-			);
-			path = miniboxUITests;
 			sourceTree = "<group>";
 		};
 		97D21E57251FBE4A0092B043 /* resources */ = {
@@ -292,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97D21E3A251FBDC00092B043 /* miniboxUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
